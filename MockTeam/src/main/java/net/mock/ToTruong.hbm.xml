@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 17, 2015 11:44:47 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+  
+     <class name="net.mock.entity.ToTruongEntity" table="totruong">
+    
+  	
+        <id name="username" type="java.lang.String">
+            <column name="username" />
+        </id>
+ 		  <property name="pw" type="java.lang.String">
+            <column name="pw" />
+        </property>
+      <property name="id_nk" type="java.lang.String">
+            <column name="id_nk" />
+        </property>
+         <property name="id_nk" type="java.lang.String">
+            <column name="id_nk" />
+        </property>
+         <property name="id_todanpho" type="int">
+            <column name="id_todanpho" />
+        </property>
+				
+          <many-to-one name = "id_nk" column = "id_nk" 
+         class="net.mock.entity.ToTruongEntity" not-null="true"/>
+    <!--  <property name="soHoKhau" type="java.lang.String">
+            <column name="id_SHK" />
+        </property>-->
+            <many-to-one name = "id_todanpho" column = "id_todanpho" 
+         class="net.mock.entity.ToDanPho" not-null="true"/>
+    </class>
+</hibernate-mapping>

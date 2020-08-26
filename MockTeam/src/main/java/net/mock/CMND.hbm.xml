@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 17, 2015 11:44:47 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+  
+     <class name="net.mock.entity.CMNDEntity" table="cmnd">
+  
+        <id name="so_cmnd" type="java.lang.String">
+            <column name="soCMND" />
+        </id>
+ 		<property name="ngayCapCMND" type="date" >
+ 		            <column name="ngaycapCMND" />
+        </property>
+         <property name="noiCap" type="java.lang.String">
+            <column name="noicap" />
+        </property>
+           <property name="note" type="java.lang.String">
+            <column name="note" />
+        </property>
+         <property name="anh1" type="java.lang.String">
+            <column name="anh1" />
+        </property>
+          <property name="anh2" type="java.lang.String">
+            <column name="anh2" />
+        </property>
+        
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 17, 2015 11:44:47 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+  
+     <class name="net.mock.entity.NhanKhauEntity" table="NHANKHAU">
+    
+  	
+        <id name="id_nk" type="java.lang.String">
+            <column name="ID_NK" />
+        </id>
+ 		  <property name="ten" type="java.lang.String">
+            <column name="ten" />
+        </property>
+      <property name="ngaySinh" type="date">
+            <column name="ngaysinh" />
+        </property>
+          <property name="noiSinh" type="java.lang.String">
+            <column name="NOISINH" />
+        </property>
+         <property name="queQuan" type="java.lang.String">
+            <column name="QUEQUAN" />
+        </property>
+         <property name="danToc" type="java.lang.String">
+            <column name="DANTOC" />
+        </property>
+         <property name="tonGiao" type="java.lang.String">
+            <column name="TONGIAO" />
+        </property>
+         <property name="trinhDoVanHoa" type="java.lang.String">
+            <column name="TRINHDOVANHOA" />
+        </property>
+         <property name="ngheNghiep" type="java.lang.String">
+            <column name="NGHENGHIEP" />
+        </property>
+         <property name="noiLamViec" type="java.lang.String">
+            <column name="NOILAMVIEC" />
+        </property>
+         <property name="dateDangKyThuongTru" type="date">
+            <column name="NgayThangNamDangKyThuongTru" />
+        </property>
+          <property name="quanHeCH" type="java.lang.String">
+            <column name="QuanHeVoiChuHo" />
+        </property>
+         <property name="anh" type="java.lang.String">
+            <column name="anh" />
+        </property>
+	<!-- <property name="soCMND" type="java.lang.String">
+            <column name="soCMND" />
+        </property>-->
+          <many-to-one name = "soCMND" column = "soCMND" 
+         class="net.mock.entity.CMNDEntity" not-null="true"/>
+    <!--  <property name="soHoKhau" type="java.lang.String">
+            <column name="id_SHK" />
+        </property>-->
+            <many-to-one name = "soHoKhau" column = "id_SHK" 
+         class="net.mock.entity.SoHoKhauEntity" not-null="true"/>
+    </class>
+</hibernate-mapping>
